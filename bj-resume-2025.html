@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernard C. Rayoso Jr. - Senior Full Stack Developer CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0077b6; /* Deep Blue */
+            --accent-color: #00b4d8; /* Teal/Electric Blue */
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --white-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+        }
+
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: var(--white-bg);
+        }
+
+        .sidebar {
+            width: 35%;
+            background-color: var(--light-bg);
+            padding: 30px;
+        }
+
+        .main-content {
+            width: 65%;
+            padding: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.1em;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        /* Profile/Contact Section */
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header h1 {
+            border-bottom: none;
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+
+        /* Profile picture */
+        .header .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white-bg);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin: 0 auto 12px;
+            display: block;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--accent-color);
+        }
+
+        /* Tech Stack Styling */
+        .tech-stack-group {
+            margin-bottom: 15px;
+        }
+
+        .tech-stack-group h3 {
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+        }
+
+        .tech-stack-group h3 i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 5px 0;
+        }
+
+        .skill-item {
+            background-color: var(--white-bg);
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        /* Experience Timeline */
+        .experience-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .experience-item::before {
+            content: ' ';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 13px;
+            height: 13px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--white-bg);
+            box-shadow: 0 0 0 1px var(--accent-color);
+        }
+
+        .experience-item h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .experience-item p {
+            margin: 0 0 5px 0;
+            font-size: 0.9em;
+        }
+
+        .experience-item ul {
+            padding-left: 20px;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+        
+        /* Impact Metrics */
+        .impact-metrics {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px 0;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .metric {
+            padding: 10px;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 1.8em;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .metric span {
+            font-size: 0.85em;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    <div class="sidebar">
+        <div class="contact-info">
+            <div class="header">
+                <img src="assets/rayoso-avatar.jpg" alt="Bernard C. Rayoso Jr. profile photo" class="profile-pic">
+                 <h1 style="color: var(--text-color);">Bernard C. Rayoso Jr.</h1>
+             </div>
+            <h2><i class="fas fa-address-book"></i> Contact</h2>
+            <p><i class="fas fa-map-marker-alt"></i> 2520 Cagayan delpilar St. sta. Ana, Manila Philippines</p>
+            <p><i class="fas fa-phone"></i> +639671560886</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:rayosobernard@gmail.com" style="color: var(--primary-color);">rayosobernard@gmail.com</a></p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/bernardrayosojr/" target="_blank" style="color: var(--primary-color);">LinkedIn Profile</a></p>
+        </div>
+
+        <h2><i class="fas fa-cogs"></i> Key Skills</h2>
+        <div class="tech-stack-group">
+            <p class="skill-item">Excellent team player/independent worker</p>
+            <p class="skill-item">E-commerce Web/Mobile application experience</p>
+            <p class="skill-item">Agile development and Project Lifecycle Management</p>
+            <p class="skill-item">Coordination and communication skills</p>
+        </div>
+
+        <h2><i class="fas fa-laptop-code"></i> Technology Stack</h2>
+        <div class="tech-stack-group">
+            <h3><i class="fas fa-code"></i> Frontend Web</h3>
+            <div class="skills-list">
+                <span class="skill-item">React.js</span>
+                <span class="skill-item">HTML5</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">Javascript</span>
+                <span class="skill-item">Angular 5</span>
+                <span class="skill-item">PHP</span>
+                <span class="skill-item">Bootstrap</span>
+                <span class="skill-item">Tailwind.css</span>
+            </div>
+            
+            <h3><i class="fas fa-mobile-alt"></i> Frontend Mobile</h3>
+            <div class="skills-list">
+                <span class="skill-item">React Native</span>
+                <span class="skill-item">Swift (Xcode iOS)</span>
+                <span class="skill-item">Android (Android Studio)</span>
+                <span class="skill-item">Ionic</span>
+                <span class="skill-item">Cordova</span>
+            </div>
+
+            <h3><i class="fas fa-server"></i> Backend & Database</h3>
+            <div class="skills-list">
+                <span class="skill-item">MySQL</span>
+                <span class="skill-item">NoSql</span>
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">MongoDB</span>
+                <span class="skill-item">DynamoDB</span>
+                <span class="skill-item">Laravel</span>
+                <span class="skill-item">Express</span>
+            </div>
+
+            <h3><i class="fas fa-cloud"></i> Cloud & API Service</h3>
+            <div class="skills-list">
+                <span class="skill-item">API Gateway (AWS)</span>
+                <span class="skill-item">Azure</span>
+                <span class="skill-item">Lambda (AWS)</span>
+                <span class="skill-item">Postman</span>
+                <span class="skill-item">Swagger</span>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <p><i class="fas fa-award"></i> AWS Technical Professional Completion</p>
+        <p><i class="fas fa-award"></i> Leadership Training Certification</p>
+        <p><i class="fas fa-award"></i> HTML5 Studio Certification</p>
+        <p><i class="fas fa-award"></i> Google Studio Certification</p>
+        <p><i class="fas fa-award"></i> SAP business one</p>
+
+    </div>
+
+    <div class="main-content">
+        <h1>Career Profile</h1>
+        <p>With over a decade in the IT industry, my expertise spans across essential technologies for project delivery and solving complex problems. I am seeking to use innovation and project management skills to improve quality, costing, and time metrics. My ability to adapt quickly and learn new technologies assures capability in meeting specific project requirements.</p>
+
+        <div class="impact-metrics">
+            <div class="metric">
+                <strong>15% <i class="fa fa-arrow-up" aria-hidden="true"></i> </strong>
+                <span>Product Sales Increase</span>
+            </div>
+            <div class="metric">
+                <strong>25% <i class="fa fa-arrow-up" aria-hidden="true"></i></strong>
+                <span>Annual Revenue Growth</span>
+            </div>
+            <div class="metric">
+                <strong>10+ Years</strong>
+                <span>IT Industry Experience</span>
+            </div>
+        </div>
+
+        <h1><i class="fas fa-briefcase"></i> Work Experience</h1>
+
+        <div class="experience-item">
+            <h3>Front-end Developer / IT Consultant</h3>
+            <p><strong>Freelance Work / Consultancy</strong> | October - Present</p>
+            <ul>
+                <li>Used **React** for projects, including developing a Google Chrome extension for a what's app plugin (multi-message.com).</li>
+                <li>Managed client configuration, application design, development, and implementation.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Senior Full-stack developer</h3>
+            <p><strong>RCG Global Services / MyRidius</strong> (Makati, Philippines) | April 2022 - September 2025</p>
+            <ul>
+                <li>Analyzed project specifications and technical requirements, ensuring a clear understanding of the scope, dependencies, and potential impact of proposed changes.</li>
+
+                <li>Designed, developed, and maintained scalable fullstack applications using modern frameworks and best practices for performance, security, and maintainability.</li>
+                <li>Authored and maintained comprehensive technical documentation, facilitating efficient knowledge transfer and supporting long-term system sustainability.</li>
+                <li>Led and participated in technical meetings, design discussions, and peer code reviews, promoting clean architecture and adherence to coding standards.</li>
+                <li>Implemented robust, modular, and maintainable codebases that align with enterprise development guidelines and continuous integration workflows.</li>
+                <li>Conducted in-depth testing, debugging, and performance optimization to ensure system reliability and seamless user experience across platforms.</li>
+                <li>Collaborated closely with cross-functional teams—including UI/UX designers, QA engineers, and product managers—to deliver high-quality software solutions on schedule.</li>
+                <li>Mentored junior developers, providing code guidance, architectural insight, and professional development support within the team.</li>
+                <li>Championed best practices in DevOps, version control, and deployment pipelines, improving release efficiency and system uptime.</li>
+                <li>Coordinated with other software engineers and stakeholders to align technical execution with strategic business objectives.</li>
+                <li>Delivered training sessions, product demonstrations, and technical support to both internal development teams and key stakeholders.</li>
+                <li>Stayed current with emerging technologies and frameworks, integrating innovative tools and methodologies to enhance development processes.</li>
+                <li>Contributed to architectural planning and system scalability decisions, ensuring long-term growth and technical excellence of the platform.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Full-stack developer</h3>
+            <p><strong>Unicity International</strong> (Taguig, Philippines) | March 2019 - April 2022</p>
+            <ul>
+                <li>Used **React** as a frontend to develop features for an **E-commerce web application** (user profile, shopping cart, API payment integration, email marketing).</li>
+                <li>Participated in product development from ideation to deployment.</li>
+                <li>Maintained and optimized existing systems and ensured application responsiveness.</li>
+                <li>Practiced **Agile development** methodology and participated in stand-ups and sprint planning.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Mobile Application Developer</h3>
+            <p><strong>Unicity International </strong> (Taguig, Philippines) | August 2016 – March 2019</p>
+            <ul>
+                <li>Developed and implemented new features for the company’s eCommerce platform using React and React Native.</li>
+                <li>Managed the full application development lifecycle—from concept and design to testing, deployment, and ongoing support.</li>
+                <li>Collaborated with stakeholders to gather technical requirements and propose effective, scalable solutions.</li>
+                <li>Diagnosed, debugged, and optimized code to enhance system performance and overall productivity.</li>
+                <li>Designed and refined user interfaces to improve usability and customer satisfaction.</li>
+                <li>Ensured all applications, both new and existing, complied with quality assurance standards and best practices.</li>
+                <li>Conducted research on emerging technologies, tools, and protocols to drive innovation and continuous improvement.</li>
+                <li>Provided IT support and hands-on technical assistance to both internal teams and external clients.</li>
+                <li>Assisted customers with mobile and web-related inquiries, ensuring smooth and reliable digital transactions.</li>
+                <li>Performed website development, updates, and maintenance to maintain consistent system reliability and performance.</li>
+            </ul>
+        </div>
+
+         <div class="experience-item">
+            <h3>Mobile Application Developer (iOS and Android) </h3>
+            <p><strong>Design Plus </strong> (Al-Khobar, Saudi Arabia) | June 2014 – July 2016</p>
+            <ul>
+                <li>Responsible for the design, coding, testing, and installation of mobile and web Applications.</li>
+                <li>Providing advice, support, and practical assistance to system users.</li>
+                <li>Collaborated with stakeholders to gather technical requirements and propose effective, scalable solutions.</li>
+                <li>Maintenance of network services and security.</li>
+                <li>Update, maintenance, and installation of system software and computer applications.</li>
+    
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Mobile Application Developer (iOS and Android) </h3>
+            <p><strong>Wide-Out Workforces Incorporated </strong> (Taguig, Philippines) | May 2012 – April 2014</p>
+            <ul>
+                <li>Responsible for coding, designing, bug-fixing, and testing different rich media ads in accordance with Google standards</li>
+                <li>Creating web banners of new movie trailers from PSD to Flash or different static banners also applying Google standards.</li>
+            </ul>
+        </div>
+
+
+                <div class="experience-item">
+            <h3>Intern </h3>
+            <p><strong>MB Philippines (Micro Banking)  </strong> (Makati, Philippines) | July 2011 – September 2011</p>
+            <ul>
+                <li>Providing support & maintenance of existing software to Lead Programmer.</li>
+                <li>Handled database management and backup system.</li>
+                <li>Provides solutions, assistance in the resolution of software and hardware support issues.</li>
+            </ul>
+        </div>
+
+</div>
+</body>
+</html>
+
+
+
